@@ -10,42 +10,42 @@ const products: Products[] = [
     id: 1,
     title: 'Pizza Marguerita',
     description:
-      'A Pizza Marguerita leva a autêntica cozinha italiana até você! Desfrute de pizzas caseiras, pizzas',
+      'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
     image: pizza
   },
   {
     id: 2,
     title: 'Pizza Marguerita',
     description:
-      'A Pizza Marguerita leva a autêntica cozinha italiana até você! Desfrute de pizzas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!',
+      'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
     image: pizza
   },
   {
     id: 3,
     title: 'Pizza Marguerita',
     description:
-      'A Pizza Marguerita leva a autêntica cozinha italiana até você! Desfrute de pizzas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!',
+      'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
     image: pizza
   },
   {
     id: 4,
     title: 'Pizza Marguerita',
     description:
-      'A Pizza Marguerita leva a autêntica cozinha italiana até você! Desfrute de pizzas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!',
+      'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
     image: pizza
   },
   {
     id: 5,
     title: 'Pizza Marguerita',
     description:
-      'A Pizza Marguerita leva a autêntica cozinha italiana até você! Desfrute de pizzas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!',
+      'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
     image: pizza
   },
   {
     id: 6,
     title: 'Pizza Marguerita',
     description:
-      'A Pizza Marguerita leva a autêntica cozinha italiana até você! Desfrute de pizzas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!',
+      'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
     image: pizza
   }
 ]

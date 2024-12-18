@@ -17,13 +17,16 @@ export const ProductImage = styled.img`
 
 export const InfoContainter = styled.div`
   flex-direction: column;
-  padding: 0;
-  color: ${Colors.pinkLight};
+  color: ${Colors.colorPrimary};
   width: 100%;
   justify-content: space-between;
   display: flex;
   height: 173px;
   margin: 0;
+
+  button {
+    background-color: ${Colors.colorPrimary};
+  }
 `
 export const ProductTitle = styled.h2`
   font-weight: bold;

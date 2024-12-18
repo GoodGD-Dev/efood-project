@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import { Colors } from '../../styles'
 
 export const CardComponent = styled.div`
+  background-color: ${Colors.white};
   width: 472px;
   margin-top: 40px;
   position: relative;

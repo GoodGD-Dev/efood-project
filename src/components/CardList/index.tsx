@@ -5,7 +5,6 @@ import RestaurantsCard from '../RestaurantsCard'
 import ProductsCard from '../ProductsCard'
 import Products from '../../models/Products'
 import ProductModal from '../ProductModal'
-// import { useLocation } from 'react-router-dom'
 
 export type Props = {
   columns: 'home' | 'restaurant'
@@ -50,7 +49,12 @@ export const CardList = ({ columns, restaurants, products }: Props) => {
             ))}
         </List>
       </Container>
-      <ProductModal onClick={() => modalIsOpen ? setModalIsOpen(false) : setModalIsOpen(true)} className={modalIsOpen ? 'visible' : ''} />
+      <ProductModal
+        onClick={() =>
+          modalIsOpen ? setModalIsOpen(false) : setModalIsOpen(true)
+        }
+        className={modalIsOpen ? 'visible' : ''}
+      />
     </>
   )
 }

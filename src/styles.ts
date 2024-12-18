@@ -18,7 +18,7 @@ export const GlobalCss = createGlobalStyle`
   }
 
   body {
-    background-color: ${Colors.white};
+    background-color: ${Colors.colorPrimary};
     color: ${Colors.colorSecondary};
   }
 `
