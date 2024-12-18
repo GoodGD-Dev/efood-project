@@ -1,17 +1,25 @@
 import React from 'react'
 
-import { BannerStore, BannerStoreContent, HeaderBar, Logo } from './styles'
+import {
+  BannerStore,
+  BannerStoreContent,
+  HContainer,
+  HeaderBar,
+  Logo
+} from './styles'
 import logo from '../../assets/images/logo.png'
 import { Link } from 'react-router-dom'
 
 const HeaderStore = () => (
-  <div>
+  <>
     <HeaderBar>
-      <h3>Restaurantes</h3>
-      <Link to="/">
-        <Logo src={logo} alt="efood" />
-      </Link>
-      <p>0 produto(s) no carrinho</p>
+      <HContainer>
+        <h3>Restaurantes</h3>
+        <Link to="/">
+          <Logo src={logo} alt="efood" />
+        </Link>
+        <p>0 produto(s) no carrinho</p>
+      </HContainer>
     </HeaderBar>
     <BannerStore>
       <BannerStoreContent>
@@ -19,7 +27,7 @@ const HeaderStore = () => (
         <h3>La Dolce Vita Trattoria</h3>
       </BannerStoreContent>
     </BannerStore>
-  </div>
+  </>
 )
 
 export default HeaderStore

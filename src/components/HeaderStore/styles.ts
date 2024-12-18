@@ -56,3 +56,12 @@ export const BannerStoreContent = styled.div`
 export const Logo = styled.img`
   width: 125px;
 `
+
+export const HContainer = styled.div`
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`
