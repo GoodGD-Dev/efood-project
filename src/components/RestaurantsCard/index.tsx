@@ -60,7 +60,7 @@ const RestaurantsCard = ({
           <Description>{description}</Description>
         </div>
         <Button type="link" to={to} onClick={onClick} title="Saiba mais">
-          Adicionar ao Carrinho
+          Saiba mais
         </Button>
       </InfoContainter>
     </CardComponent>
