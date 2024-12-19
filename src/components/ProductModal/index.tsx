@@ -1,6 +1,5 @@
 import React from 'react'
 
-import Pizza from '../../assets/images/pizza.png'
 import Close from '../../assets/images/close 1.png'
 import {
   CloseButton,
@@ -16,30 +15,51 @@ import Button from '../Button'
 type Props = {
   className: string
   onClick: () => void
+  image: string
+  name: string
+  description: string
+  portion: string
+  price: number | undefined
 }
-const ProductModal = ({ className, onClick }: Props) => {
+
+export const formatPrice = (preco = 0) => {
+  return new Intl.NumberFormat('pt-BR', {
+    style: 'currency',
+    currency: 'BRL'
+  }).format(preco)
+}
+
+const ProductModal = ({
+  className,
+  onClick,
+  name,
+  description,
+  portion,
+  price,
+  image
+}: Props) => {
   return (
-    <ModalContainer onClick={onClick} className={className}>
+    <ModalContainer className={className}>
       <ModalContent>
         <header>
           <CloseButton onClick={onClick} src={Close} alt="Fechar" />
         </header>
         <InfoContent>
-          <img src={Pizza} alt="Pizza" />
+          <img src={image} alt="Pizza" />
           <div>
-            <ModalTitle>Pizza Margerita</ModalTitle>
-            <ModalText>
-              A clássica Marguerita: molho de tomate suculento, mussarela
-              derretida, manjericão fresco e um toque de azeite. Sabor e
-              simplicidade!
-            </ModalText>
-            <ModalInfo>Serve: de 2 a 3 pessoas</ModalInfo>
-            <Button type="button" title="Adicionar ao carrinho - R$ 60,90">
-              Adicionar ao carrinho - R$ 60,90
+            <ModalTitle>{name}</ModalTitle>
+            <ModalText>{description}</ModalText>
+            <ModalInfo>{portion}</ModalInfo>
+            <Button
+              type="button"
+              title={`Adicionar ao carrinho - ${formatPrice(price)}`}
+            >
+              {`Adicionar ao carrinho - ${formatPrice(price)}`}
             </Button>
           </div>
         </InfoContent>
       </ModalContent>
+      <div onClick={onClick} className="overlay"></div>
     </ModalContainer>
   )
 }

@@ -12,6 +12,10 @@ export const HeaderBar = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+
+  img {
+    width: 125px;
+  }
 `
 
 export const Subtitle = styled.h2`
@@ -19,7 +23,4 @@ export const Subtitle = styled.h2`
   font-weight: bold;
   width: 540px;
   text-align: center;
-`
-export const Logo = styled.img`
-  width: 125px;
 `

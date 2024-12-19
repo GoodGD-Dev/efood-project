@@ -2,32 +2,33 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import { Colors } from '../../styles'
 
-export const ButtonContainer = styled.button`
+export const ButtonProduct = styled.button`
   width: 100%;
+  height: 24px;
+  padding: 4px;
   background-color: ${Colors.pinkLight};
-  cursor: pointer;
   color: ${Colors.colorSecondary};
   font-size: 14px;
-  padding: 4px;
-  height: 24px;
   font-weight: bold;
-  margin-top: 16px;
   border: none;
   display: inline-block;
+  cursor: pointer;
+  align-self: flex-end;
+  margin-top: auto; /* Empurra o botão para o final */
 `
 
-export const ButtonLink = styled(Link)`
+export const ButtonRestaurant = styled(Link)`
+  width: 82px;
   height: 24px;
+  text-align: center;
   font-size: 14px;
   font-weight: bold;
-  display: inline-block;
-  color: ${Colors.white};
+  padding: 4px;
   background-color: ${Colors.colorSecondary};
+  color: ${Colors.white};
+  border: none;
+  display: inline-block;
+  margin-top: 16px;
   cursor: pointer;
   text-decoration: none;
-  width: 82px;
-  padding: 4px;
-  text-align: center;
-  border: none;
-  margin-top: 16px;
 `

@@ -1,49 +1,48 @@
 import styled from 'styled-components'
 import { Colors } from '../../styles'
-import { ButtonContainer } from '../Button/styles'
+import { ButtonProduct } from '../Button/styles'
 
 export const ModalContainer = styled.div`
-  justify-content: space-between;
-  z-index: 2;
-  height: 100%;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  height: 100%;
   display: none;
   align-items: center;
+  justify-content: space-between;
+  z-index: 2;
 
   &.visible {
     display: flex;
   }
 
-  ${ButtonContainer} {
-    height: 24px;
+  ${ButtonProduct} {
     width: 218px;
+    height: 24px;
   }
 
   // ao descomponentizar modal after vira uma classe .overlay para que o fechamento do modal aconteça somente ao clicar no fundo
 
-  &::after {
-    content: '';
+  .overlay {
     position: absolute;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
     top: 0;
     left: 0;
     width: 100%;
-    /* z-index: 4; */
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
   }
 `
 
 export const ModalContent = styled.div`
-  background-color: ${Colors.colorSecondary};
-  padding: 8px;
-  color: ${Colors.white};
   max-width: 1024px;
   height: 344px;
   width: 100%;
   margin: 0 auto;
+  background-color: ${Colors.colorSecondary};
+  padding: 8px;
+  color: ${Colors.white};
+  /* position: relative; */
   z-index: 1;
 
   > header {
@@ -61,29 +60,33 @@ export const CloseButton = styled.img`
 `
 
 export const InfoContent = styled.div`
+  display: flex;
   align-items: start;
   justify-content: center;
-  display: flex;
+  /* padding: 24px; */
 
   > img {
+    width: 280px;
     height: 280px;
     margin-right: 24px;
-    width: 280px;
+    object-fit: cover;
   }
 `
+
+export const ModalTitle = styled.h2`
+  margin-bottom: 16px;
+  font-size: 18px;
+`
+
 export const ModalText = styled.p`
-  margin-bottom: 24px;
   font-size: 14px;
+  margin-bottom: 24px;
+  line-height: 1.4em;
 `
 
 export const ModalInfo = styled.p`
-  margin-bottom: 20px;
   font-size: 14px;
+  margin-bottom: 20px;
 `
 
 export const InfoButton = styled.div``
-
-export const ModalTitle = styled.h2`
-  font-size: 18px;
-  margin-bottom: 16px;
-`
