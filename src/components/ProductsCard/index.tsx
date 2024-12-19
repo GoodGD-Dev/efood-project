@@ -33,7 +33,7 @@ const ProductsCard = ({ name, description, image, onClick }: Props) => {
           </Description>
         </div>
         <Button type="button" onClick={onClick} title="Saiba mais">
-          Saiba mais
+          Adicionar ao Carrinho
         </Button>
       </InfoContainter>
     </CardComponent>
