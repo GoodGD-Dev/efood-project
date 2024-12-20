@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components'
 
 export const Colors = {
   colorPrimary: '#FFEBD9',
@@ -7,6 +7,11 @@ export const Colors = {
   yellow: '#FFB930',
   white: '#FFFFFF',
   black: '#000000'
+}
+
+export const breakpoints = {
+  desktop: '1024px',
+  tablet: '768px'
 }
 
 export const GlobalCss = createGlobalStyle`
@@ -20,6 +25,14 @@ export const GlobalCss = createGlobalStyle`
       max-width: 1024px;
       width: 100%;
       margin: 0 auto;
+
+      @media (max-width: ${breakpoints.desktop}) {
+        max-width: 90%;
+      }
+
+      @media (max-width: ${breakpoints.tablet}) {
+        width: 95%;
+      }
     }
   }
 
@@ -27,4 +40,8 @@ export const GlobalCss = createGlobalStyle`
     background-color: ${Colors.pinkLight};
     color: ${Colors.colorSecondary};
   }
+`
+
+export const Logo = styled.img`
+  width: 125px;
 `

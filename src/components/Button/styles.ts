@@ -14,7 +14,7 @@ export const ButtonProduct = styled.button`
   display: inline-block;
   cursor: pointer;
   align-self: flex-end;
-  margin-top: auto; /* Empurra o botão para o final */
+  margin-top: auto;     /* Empurra o botão para o final */
 `
 
 export const ButtonRestaurant = styled(Link)`
