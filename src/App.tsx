@@ -1,12 +1,12 @@
 import React from 'react'
-import { Provider } from 'react-redux'
+import { Provider, useSelector } from 'react-redux'
 import { BrowserRouter, useLocation } from 'react-router-dom'
 import { GlobalCss } from './styles'
 import Header from './components/Header'
 import HeaderStore from './components/HeaderStore'
 import Pages from './routes'
 import Footer from './components/Footer'
-import { store } from './store'
+import { RootReducer, store } from './store'
 import Cart from './components/Cart'
 
 const HeaderLayout = () => {
@@ -20,7 +20,7 @@ function App() {
     <Provider store={store}>
       <BrowserRouter>
         <GlobalCss />
-        <Cart />
+        <CartCheckout />
         <HeaderLayout />
         <div>
           <Pages />
@@ -29,6 +29,11 @@ function App() {
       </BrowserRouter>
     </Provider>
   )
+}
+
+function CartCheckout() {
+  const sidebar = useSelector((state: RootReducer) => state.cart.sidebar)
+  return <Cart sidebar={sidebar} />
 }
 
 export default App

@@ -22,8 +22,6 @@ export const ModalContainer = styled.div`
     height: 24px;
   }
 
-  // ao descomponentizar modal after vira uma classe .overlay para que o fechamento do modal aconteça somente ao clicar no fundo
-
   .overlay {
     position: absolute;
     top: 0;
@@ -41,7 +39,6 @@ export const ModalContent = styled.div`
   margin: 0 auto;
   background-color: ${Colors.colorSecondary};
   color: ${Colors.white};
-  /* position: relative; */
   z-index: 1;
 
   > header {
@@ -54,6 +51,14 @@ export const ModalContent = styled.div`
 
   @media (max-width: ${breakpoints.desktop}) {
     max-width: 688px;
+  }
+
+  @media (max-width: ${breakpoints.tablet}) {
+    max-width: 300px;
+    padding: 4px 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 `
 
@@ -79,21 +84,54 @@ export const InfoContent = styled.div`
       width: 240px;
       height: 240px;
     }
+
+    @media (max-width: ${breakpoints.tablet}) {
+      width: 140px;
+      height: 140px;
+      margin-bottom: 4px;
+      margin-right: 0;
+    }
+  }
+
+  @media (max-width: ${breakpoints.tablet}) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    > div {
+      text-align: center;
+    }
   }
 `
 
 export const ModalTitle = styled.h2`
   margin-bottom: 16px;
   font-size: 18px;
+
+  @media (max-width: ${breakpoints.tablet}) {
+    margin-bottom: 8px;
+    font-size: 16px;
+  }
 `
 
 export const ModalText = styled.p`
   font-size: 14px;
   margin-bottom: 24px;
   line-height: 1.4em;
+
+  @media (max-width: ${breakpoints.tablet}) {
+    margin-bottom: 8px;
+    font-size: 12px;
+    line-height: 1.1em;
+  }
 `
 
 export const ModalInfo = styled.p`
   font-size: 14px;
   margin-bottom: 20px;
+
+  @media (max-width: ${breakpoints.tablet}) {
+    font-size: 12px;
+    margin-bottom: 16px;
+  }
 `

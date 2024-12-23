@@ -12,6 +12,15 @@ export const HeaderBar = styled.header`
   height: 160px;
   align-items: center;
   justify-content: space-between;
+`
+
+export const HContainer = styled.div`
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
   @media (max-width: ${breakpoints.tablet}) {
     font-size: 12px;
@@ -33,13 +42,4 @@ export const HeaderBar = styled.header`
       width: 70px;
     }
   }
-`
-
-export const HContainer = styled.div`
-  max-width: 1024px;
-  width: 100%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 `
